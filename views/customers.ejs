@@ -1,0 +1,37 @@
+<%- include('components/header.ejs') %>
+
+    <div class="banner container"></div>
+
+    <div class="container ">
+        <div class="heading">
+            <h2>List of Customers</h2>
+        </div>
+
+        <table class="list" id="storeList">
+            <thead class="index-thead">
+                <tr class="row">
+                    <th class="index-th col d-flex justify-content-center">SNo.</th>
+                    <th class="index-th col d-flex justify-content-center">Name</th>
+                    <th class="index-th col d-flex justify-content-center">Balance</th>
+                    <th class="index-th col d-flex justify-content-center">Transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let c of customer) {%>
+                    <tr class="row">
+                        <td class="index-td col d-flex justify-content-center"><%= c.SNo %></td>
+                        <td class="index-td col d-flex justify-content-center">
+                            <%= c.username %>
+                        </td>
+                        <td class="index-td col d-flex justify-content-center">
+                            <%= c.Balance %>
+                        </td>
+                        <td class="index-td col d-flex justify-content-center">
+                            <a href="/customer/<%= c._id %>"><button class="view">View</button></a></td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <%- include('components/footer.ejs') %>

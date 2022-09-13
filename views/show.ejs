@@ -1,0 +1,172 @@
+<style>
+    nav {
+        background-color: #F6FCFC;
+    }
+
+    .navbar-brand {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+    }
+
+    .navbar ul {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar ul li {
+        padding: 0 1.8rem;
+    }
+
+    .navbar ul li a {
+        color: #2C3333;
+    }
+
+    .navbar ul li a:hover {
+        color: #35B8BE;
+    }
+
+    footer {
+        padding: 10px 0;
+        background-color: #2C3333;
+    }
+
+    .show-icon {
+        filter: invert(58%) sepia(31%) saturate(808%) hue-rotate(134deg) brightness(101%) contrast(96%);
+    }
+
+    .pe-2 {
+        filter: invert(7%) sepia(6%) saturate(306%) hue-rotate(131deg) brightness(93%) contrast(92%);
+    }
+
+    .show-link{
+        text-decoration: none;
+    }
+
+    .button-56 {
+  align-items: center;
+  background-color: #F6FCFC;
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #35B8BE;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #35B8BE;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #fff;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+.banner{
+  margin: 2rem auto;
+  height: 25rem;
+  width: 100%;
+  background: url(/images/banner.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+</style>
+<%- include('components/header.ejs') %>
+
+    <div class="banner container"></div>
+
+    <div class="container row" style="margin: 0 10%;">
+        <div class="container details p-5 col-3 d-flex justify-content-center flex-column">
+            <div class="details-inner">
+                <h2 style="color: #35B8BE;"><strong>
+                        <%= t.username %>
+                    </strong></h2>
+            </div>
+            <div class="details-inner"><i class="fa-solid fa-envelope pe-2"></i>
+                <%= t.email %>
+            </div>
+            <div class="details-inner"><i class="fa-solid fa-phone pe-2"></i>
+                <%= t.contact %>
+            </div>
+            <div class="details-inner">Account Balance: <strong>₹<%= t.Balance %></strong></div>
+        </div>
+        <div class="container operations p-5 col-9">
+            <div class="container">
+                <div class="icon-1 row p-5 d-flex justify-content-center">
+                    <div class="icon col-1">
+                        <i class="fa-solid fa-money-bill-transfer fa-2xl show-icon"></i>
+                    </div>
+                    <div class="content col-5">
+                        <p>Transfer your money online from your account to any account using PayFlow.</p>
+                    </div>
+                    <div class="btn-op col-6 d-flex justify-content-center">
+                        <a class="show-link" href="/customer/<%= t._id %>/transfer"><button class="button-56" role="button">Transfer Money</button></a>
+                    </div>
+                </div>
+                <div class="icon-1 row p-5 d-flex justify-content-center">
+                    <div class="icon col-1">
+                        <i class="fa-solid fa-clock-rotate-left fa-2xl show-icon"></i>
+                    </div>
+                    <div class="content col-5">
+                        <p>Get all information about your previous money transfered by your account on payFlow.</p>
+                    </div>
+                    <div class="btn-op col-6 d-flex justify-content-center">
+                        <a class="show-link" href="/customer/<%= t._id %>/history"><button class="button-56" role="button">Past Transactions</button></a>
+                    </div>
+                </div>
+                <div class="icon-1 row p-5 d-flex justify-content-center">
+                    <div class="icon col-1">
+                        <i class="fa-solid fa-circle-chevron-left fa-2xl show-icon"></i>
+                    </div>
+                    <div class="content col-5">
+                        <p>Select different account.</p>
+                    </div>
+                    <div class="btn-op col-6 d-flex justify-content-center">
+                        <a class="show-link" href="/customer"><button class="button-56" role="button">Go Back</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('components/footer.ejs') %>

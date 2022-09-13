@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+p{
+  color: #73777B;
+}
+
+a {
+  text-decoration: none;
+  color: #35B8BE;
+}
+
+a:hover {
+  color: #35B8BE;
+}
+
+nav {
+  background-color: #F6FCFC;
+}
+
+.navbar-brand {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.navbar ul {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar ul li {
+  padding: 0 1.8rem;
+}
+
+.navbar ul li a {
+  color: #2C3333;
+}
+
+.navbar ul li a:hover {
+  color: #35B8BE;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  height: 600px;
+  width: 600px;
+  background: url(images/Investment-data-amico.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 10%;
+}
+
+.get-started {
+  align-items: center;
+  background-color: #F6FCFC;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  /* height: 48px; */
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+a .get-started{
+  height: 3rem;
+  width: 8rem;
+  padding: 10px;
+}
+
+.get-started:after {
+  background-color: #35B8BE;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.get-started:hover:after {
+  transform: translate(0, 0);
+}
+
+.get-started:active {
+  background-color: #F5F5F5;
+  outline: 0;
+}
+
+.get-started:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .get-started {
+    padding: 0 40px;
+  }
+}
+
+
+.get-started-now {
+  align-items: center;
+  background-color: #F6FCFC;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+a .get-started-now{
+  height: 3rem;
+  width: 10rem;
+  padding: 10px;
+}
+
+.get-started-now:after {
+  background-color: #35B8BE;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.get-started-now:hover:after {
+  transform: translate(0, 0);
+}
+
+.get-started-now:active {
+  background-color: #F5F5F5;
+  outline: 0;
+}
+
+.get-started-now:hover {
+  outline: 0;
+}
+
+.intro {
+  background-color: #F6FCFC;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.intro-inside-1, .intro-inside-2{
+  justify-content: center;
+}
+
+.intro-inside-2{
+  margin-top: 5%;
+}
+
+.line{
+  width: 85px;
+    height: 2px;
+    margin: 1.5% 4%;
+    background-color: #152c5b;
+}
+
+footer{
+  padding: 10px 0;
+  background-color: #2C3333;
+}
+
+.banner{
+  margin: 2rem auto;
+  height: 25rem;
+  width: 100%;
+  background: url(images/banner.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+}
+
+table{
+  width: 100%;
+  background-color: #fff;
+  border-spacing: 1; 
+  border-collapse: collapse;
+  max-width:1170px; 
+  margin: 3% auto;
+  position:relative;
+}
+
+thead{
+  background-color: #F6FCFC;
+  color: #35B8BE;
+}
+
+th{
+  padding: 10px;
+}
+
+td{
+  padding: 10px;
+  border-top: 1px solid #EEF2E6;
+  border-bottom: 1px solid #EEF2E6;
+}
+
+.view {
+  background-color: #C2EAEB;
+  border: 2px solid #35B8BE;
+  border-radius: 30px;
+  box-shadow: #2C3333 4px 4px 0 0;
+  color: #2C3333;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.view:hover {
+  background-color: #fff;
+}
+
+.view:active {
+  box-shadow: #35B8BE 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .view {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.photo{
+  width: 500px;
+  height: 500px;
+  background: url(https://images.unsplash.com/photo-1565347878134-064b9185ced8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 30%);
+}
+
+.fa-circle-play{
+  /* filter: invert(74%) sepia(65%) saturate(481%) hue-rotate(128deg) brightness(78%) contrast(87%); */
+  cursor: pointer;
+}
+
+.fa-circle-play:hover{
+  filter: invert(38%) sepia(13%) saturate(2380%) hue-rotate(134deg) brightness(93%) contrast(81%);
+}
